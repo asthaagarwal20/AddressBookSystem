@@ -13,6 +13,7 @@ namespace AddressBookSystem
              MultipleAddressBook multipleAddressBook = new MultipleAddressBook();
             multipleAddressBook.MultipleBook();
             multipleAddressBook.Display();
+            multipleAddressBook.SearchPersonInCityOrState();
         }
     }
 }

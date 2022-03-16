@@ -41,5 +41,24 @@ namespace AddressBookSystem
                 }
                 }
             }
+        public void SearchPersonInCityOrState()
+        {
+            Console.WriteLine("enter the city or state name");
+            string city=Console.ReadLine();
+            int found = 0;
+            foreach(KeyValuePair<string, List<Contact>> user in UserAddressBook)
+            {
+                foreach (Contact contact in user.Value)
+                {
+                    if ( contact.city == city || contact.state == city)
+                    {
+                        Console.WriteLine(contact.firstName);
+                        found = 1;
+                    }
+                }
+            }
+            if (found == 0)
+                Console.WriteLine("No record found");
         }
+    }
 }
