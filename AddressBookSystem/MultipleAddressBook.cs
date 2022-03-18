@@ -28,12 +28,22 @@ namespace AddressBookSystem
             FileIO file = new FileIO();
             file.WriteUsingWriteWriter(UserAddressBook);
         }
+        public void WriteInCSVFile()
+        {
+            FileIO file = new FileIO();
+            file.WriteInCSVFile(UserAddressBook);
+        }
         public void ReadFile()
         {
             FileIO file = new FileIO();
             file.ReadFile();
         }
-            public void Display()
+        public void ReadInCSVFile()
+        {
+            FileIO file = new FileIO();
+            file.ReadInCSVFile();
+        }
+        public void Display()
             {
                 foreach (KeyValuePair<string, List<Contact>> user in UserAddressBook)
                 {
